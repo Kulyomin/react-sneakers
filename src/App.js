@@ -22,7 +22,6 @@ function App() {
                <Card model={'Мужские Кроссовки Nike Blazer Mid Suede'} price={'8 999'} />
                <Card model={'Мужские Кроссовки Nike Blazer Mid Suede'} price={'14 999'} />
             </div>
-
          </div>
 
       </div>
