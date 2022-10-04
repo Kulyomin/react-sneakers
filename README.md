@@ -1,6 +1,8 @@
 Интернет-магазин кроссовок - <b>React Sneakers</b>
+
 <b>Автор создания:</b> Kulyomin Evgenii
 <b>Автор идеи:</b> Archakov Blog
+
 <b>Stack:<b>
 <ul>
     <li>ReactJS + хуки</li>
