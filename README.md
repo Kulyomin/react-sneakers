@@ -1,6 +1,7 @@
 Интернет-магазин кроссовок - <b>React Sneakers</b>
-
-Stack:
+<b>Автор создания:</b> Kulyomin Evgenii
+<b>Автор идеи:</b> Archakov Blog
+<b>Stack:<b>
 <ul>
     <li>ReactJS + хуки</li>
     <li>React Router</li>
