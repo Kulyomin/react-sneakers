@@ -10,7 +10,7 @@ export const Info = ({title, image, description}) => {
             <h2>{title}</h2>
             <p className="opacity-6 ">{description}</p>
             <button onClick={() => setCartOpened(false)} className="greenButton">
-                <img src="/image/arrow.svg" alt="arrow_icon" />
+                <img src={process.env.PUBLIC_URL + "/image/arrow.svg"} alt="arrow_icon" />
                 Вернуться назад
             </button>
         </div>

@@ -132,8 +132,8 @@ function App() {
                      isLoading={isLoading}
                   />}
                />
-               <Route path="/react-sneakers/favorites" exact element={<Favorites onAddToFavorite={onAddToFavorite} />} />
-               <Route path="/react-sneakers/orders" exact element={<Orders />} />
+               <Route path="/favorites" exact element={<Favorites onAddToFavorite={onAddToFavorite} />} />
+               <Route path="/orders" exact element={<Orders />} />
             </Routes>
          </div>
       </AppContext.Provider>

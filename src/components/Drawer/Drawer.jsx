@@ -31,26 +31,25 @@ function Drawer({onClose, onRemove ,items = [], opened }) {
          <div className={styles.drawer}>
             <h2 className="d-flex justify-between mb-30">
                Корзина
-               <img onClick={onClose} className="removeBtn cu-p" src="/image/btn-remove.svg" alt="btn_remove_icon" />
+               <img onClick={onClose} className="removeBtn cu-p" src={process.env.PUBLIC_URL + "/image/btn-remove.svg"} alt="btn_remove_icon" />
             </h2>
-
             {
                items.length > 0 ? (
                <div className="d-flex flex-column flex">
                   <div className={styles.items}>
                      {items.map((obj) => (
-                        <div className={`${styles.cart_item} d-flex align-center mb-20`}>
-                           <div style={{backgroundImage: `url(${obj.imageUrl})` }} className={styles.cartItemImg}></div>
+                        <div className="cart_item d-flex align-center mb-20">
+                           <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + obj.imageUrl})` }} className="cartItemImg"></div>
                            <div className="mr-20 flex">
                               <p className="mb-5">{obj.model}</p>
                               <p>{obj.price} руб.</p>
                            </div>
-                           <img onClick={() => onRemove(obj.id)} className={styles.removeBtn} src="/image/btn-remove.svg" alt="btn_remove_icon" />
+                           <img onClick={() => onRemove(obj.id)} className="removeBtn" src={process.env.PUBLIC_URL + "/image/btn-remove.svg"} alt="btn_remove_icon" />
                         </div>
                      ))}
                   </div>
-                  <div className={styles.cartTotalBlock}>
-                     <ul className={styles.cartTotalBlock}>
+                  <div className="cartTotalBlock">
+                     <ul className="cartTotalBlock">
                         <li className="d-flex">
                            <span>Итого:</span>
                            <div></div>
@@ -62,13 +61,19 @@ function Drawer({onClose, onRemove ,items = [], opened }) {
                            <b>{Math.round(totalPrice / 100 * 5)} руб.</b>
                         </li>
                      </ul>
-                     <button disabled={isLoading} onClick={onClickOrder} className="greenButton">Оформить заказ <img src="/image/arrow.svg" alt="arrow_icon" /></button>
+                     <button
+                        disabled={isLoading}
+                        onClick={onClickOrder}
+                        className="greenButton">
+                           Оформить заказ
+                           <img src={process.env.PUBLIC_URL + "/image/arrow.svg"} alt="arrow_icon" />
+                     </button>
                   </div>
                </div>
                ) : (
                <Info
                   title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
-                  image={isOrderComplete ? "./image/complete-order.jpg" : "./image/cart-empty.jpg"}
+                  image={isOrderComplete ? process.env.PUBLIC_URL + "./image/complete-order.jpg" : process.env.PUBLIC_URL + "/image/cart-empty.jpg"}
                   description={isOrderComplete ? `Ваш заказ №${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ"} 
                />)
             }

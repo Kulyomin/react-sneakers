@@ -31,7 +31,7 @@ function Home({
          <div className="content_title d-flex justify-between align-center mb-40">
             <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
             <div className="search_sneakers d-flex align-center pr-10 pl-10">
-               <img className="mr-10" width={15} height={15} src="/image/search.svg" alt="search_icon" />
+               <img className="mr-10" width={15} height={15} src={process.env.PUBLIC_URL + '/image/search.svg'} alt="search_icon" />
                <input onChange={onChangeSearchInput} placeholder="Поиск..." type="text" />
             </div>
          </div>

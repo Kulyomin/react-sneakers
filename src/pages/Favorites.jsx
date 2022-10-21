@@ -13,7 +13,7 @@ function Favorites({onAddToFavorite}) {
 
       <div className="sneakerContainer">
       {
-         favorites.map((item, index) => (
+         favorites.map((item) => (
             <Card
                key={item.id}
                favorited={true}

@@ -48,11 +48,11 @@ function Card({
                   <div className={styles.favorite} onClick={onFavorite}>
                      <img
                         onClick={onClickFavorite}
-                        src={isFavorite ? "/image/heart-on.svg" : "/image/heart-off.svg"}
+                        src={isFavorite ? process.env.PUBLIC_URL + '/image/heart-on.svg' : process.env.PUBLIC_URL + '/image/heart-off.svg'}
                         alt="heart_icon" />
                   </div>
                )}
-               <img width='100%' height={130} src={imageUrl} alt="sneakers_photo" />
+               <img width='100%' height={130} src={process.env.PUBLIC_URL + imageUrl} alt="sneakers_photo" />
                <h5>{model}</h5>
                <div className="d-flex justify-between align-center">
                   <div className="d-flex flex-column">
@@ -63,7 +63,7 @@ function Card({
                      <img
                         className={styles.plus}
                         onClick={onClickPlus}
-                        src={isItemAdded(id) ? "/image/btn-on.svg" : "/image/btn-off.svg"}
+                        src={isItemAdded(id) ? process.env.PUBLIC_URL +  "/image/btn-on.svg" : process.env.PUBLIC_URL + "/image/btn-off.svg"}
                         alt="add_icon"
                      />
                   )}
