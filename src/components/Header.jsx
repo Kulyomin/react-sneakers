@@ -7,7 +7,7 @@ function Header(props) {
 
    return (
       <header className="d-flex justify-between align-center p-40">
-         <Link to="/">
+         <Link to="/react-sneakers">
             <div className="headerLeft d-flex align-center">
                <img width={40} height={40} src="/image/logo.png" alt="" />
                <div className="headerInfo">

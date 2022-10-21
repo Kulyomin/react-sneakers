@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Card from '../components/Card/Card';
 import {AppContext} from '../App';
 
