@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Card from '../components/Card/Card';
-import {AppContext} from '../App';
 
 function Home({
    items,
@@ -18,11 +17,11 @@ function Home({
       // Если идёт загрузка - рендер 8 элементов, иначе показывает карточки с товаром
       return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
         <Card
-          key={index}
-          onFavorite={(obj) => onAddToFavorite(obj)}
-          onPlus={(obj) => onAddToCart(obj)}
-          loading={isLoading}
-          {...item}
+            key={index}
+            onFavorite={(obj) => onAddToFavorite(obj)}
+            onPlus={(obj) => onAddToCart(obj)}
+            loading={isLoading}
+            {...item}
         />
       ));
     };
