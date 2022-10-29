@@ -18,6 +18,7 @@ body {
    border-radius: 20px;
    max-width: 1080px;
    margin: 50px auto;
+   transition: all .3s;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
 }
 
 .content {
-   
+
    h1 {
       margin: 0;
    }
@@ -46,6 +47,7 @@ header {
    .sneakerContainer {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 40px;
    }
 
@@ -71,44 +73,44 @@ header {
 
 .cartTotalBlock {
    ul {
-       display: block;
-       margin-bottom: 30px !important;
+      display: block;
+      margin-bottom: 30px !important;
 
-       li {
-           display: flex;
-           align-items: flex-end;
-           margin-bottom: 20px;
-       }
+      li {
+         display: flex;
+         align-items: flex-end;
+         margin-bottom: 20px;
+      }
 
-       div {
-           flex: 1;
-           height: 1px;
-           border-bottom: 1px dashed #dfdfdf;
-           position: relative;
-           top: -4px;
-           margin: 0 7px;
-       }
+      div {
+         flex: 1;
+         height: 1px;
+         border-bottom: 1px dashed #dfdfdf;
+         position: relative;
+         top: -4px;
+         margin: 0 7px;
+      }
    }
 
    .greenButton {
-       position: relative;
+      position: relative;
 
-       &:disabled {
-           animation: button-loading 0.7s ease-in-out infinite;
-       }
+      &:disabled {
+         animation: button-loading 0.7s ease-in-out infinite;
+      }
 
-       &:hover {
-           img {
-               transform: translateX(5px);
-           }
-       }
+      &:hover {
+         img {
+            transform: translateX(5px);
+         }
+      }
 
-       img {
-           position: absolute;
-           right: 40px;
-           top: 22px;
-           transition: transform 0.15s ease-in-out;
-       }
+      img {
+         position: absolute;
+         right: 40px;
+         top: 22px;
+         transition: transform 0.15s ease-in-out;
+      }
    }
 
 }
@@ -120,31 +122,31 @@ header {
    padding: 20px;
 
    .cartItemImg {
-       height: 70px;
-       width: 70px;
-       background-size: contain;
-       background-position: 0 -3px;
-       background-repeat: no-repeat;
-       margin-right: 20px;
+      height: 70px;
+      width: 70px;
+      background-size: contain;
+      background-position: 0 -3px;
+      background-repeat: no-repeat;
+      margin-right: 20px;
    }
 
    p {
-       margin: 0;
-       font-size: 16px;
+      margin: 0;
+      font-size: 16px;
    }
 
    b {
-       font-size: 14px;
+      font-size: 14px;
    }
 
    .removeBtn {
-       opacity: 0.5;
-       cursor: pointer;
-       transition: opacity .15s ease-in-out;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity .15s ease-in-out;
 
-       &:hover {
-           opacity: 1;
-       }
+      &:hover {
+         opacity: 1;
+      }
    }
 }
 
@@ -152,32 +154,32 @@ header {
    text-align: center;
 
    p {
-       width: 280px;
-       line-height: 24px;
+      width: 280px;
+      line-height: 24px;
    }
 
    .greenButton {
-       width: 245px;
-       margin-top: 20px;
+      width: 245px;
+      margin-top: 20px;
 
-       &:disabled {
-           background-color: #bebebe !important;
-           cursor: default;
-       }
+      &:disabled {
+         background-color: #bebebe !important;
+         cursor: default;
+      }
 
-       &:hover {
-           img {
-               transform: rotate(180deg) translateX(3px);
-           }
-       }
+      &:hover {
+         img {
+            transform: rotate(180deg) translateX(3px);
+         }
+      }
 
-       img {
-           position: relative;
-           top: 1px;
-           transform: rotate(180deg);
-           margin-right: 15px;
-           transition: transform 0.15s ease-in-out;
-       }
+      img {
+         position: relative;
+         top: 1px;
+         transform: rotate(180deg);
+         margin-right: 15px;
+         transition: transform 0.15s ease-in-out;
+      }
    }
 }
 
@@ -206,10 +208,71 @@ header {
    0% {
       opacity: 1;
    }
+
    50% {
       opacity: 0.7;
    }
+
    100% {
       opacity: 1;
+   }
+}
+
+@media (max-width:1199px) {
+   .wrapper {
+      max-width: 830px;
+      margin: 50px auto;
+   }
+}
+
+@media (max-width:978px) {
+   .wrapper {
+      max-width: 600px;
+      margin: 50px auto;
+   }
+
+   header {
+      flex-direction: column !important;
+      gap: 30px;
+   }
+
+   header .headerLeft img {
+      width: 50px;
+      height: 50px;
+   }
+
+   header .headerInfo {
+      font-size: 15px;
+   }
+
+   header ul img {
+      width: 15px;
+      height: 15px;
+   }
+
+   header ul {
+      width: 100%;
+      justify-content: space-between;
+   }
+
+   .content_title {
+      flex-direction: column !important;
+      gap: 20px;
+   }
+
+   .search_sneakers {
+      width: 100% !important;
+   }
+
+}
+
+@media (max-width:650px) {
+   .wrapper {
+      max-width: 350px;
+      margin: 50px auto;
+   }
+
+   .content_title h1 {
+      font-size: 25px;
    }
 }
